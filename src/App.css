@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: main;
+  src: url(./assets/YoungSerif-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  object-fit: cover;
+  z-index: -1;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box{
+  display: flex;
+  position: relative;
+  height: 90vh;
+  width: 70vw;
+  border-radius: 20px;
+  background-color: rgb(52, 53, 60);
+  flex-direction: column;
+}
+
+.navbar{
+  height: 10vh;
+  background-color: rgb(31, 32, 36);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.heading{
+  font-size: 40px;
+  font-style: bold;
+  font-family: main;
+  color: rgb(255, 254, 254);
+}
+
+.content{
+  height: 70vh;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
   align-items: center;
+  gap: 40px;
+  padding-top: 20px;
+
+}
+
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: rgb(36, 36, 36);
+  border-radius: 20px;
+
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.input{
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 30px;
+  /* background-color: rgb(31, 32, 36); */
+}
+
+.messageinput{
+  height: 6vh;
+  width: 60vw;
+  border-radius: 20px;
+  background-color: rgb(40, 41, 46);
+  border-style: none;
+  outline: none;
+  font-size: 23px;
+  padding-left: 10px;  
   color: white;
+  font-family: main;
 }
 
-.App-link {
-  color: #61dafb;
+.messageinput::placeholder{
+  font-family: main;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send{
+  height: 40px;
+  width: 40px;
+}
+
+button{
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  border-style: none;
+}
+
+.requestcontainer{
+  /* background-color: blue; */
+  height: auto;
+  width: 60vw;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.profilephoto{
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 18px;
+}
+
+.requestmessage{
+  /* background-color: red; */
+  display: flex;
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+  font-family: main;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsecontainer{
+  height: auto;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.responsemessage{
+  display: flex;
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+  font-family: main;
+  justify-content: center;
+  align-items: center;
 }
